@@ -1,0 +1,35 @@
+.game-table {
+    width: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    align-items: center;
+    justify-items: center;
+
+}
+
+.game-table__box {
+    width: 90%;
+    height: 90%;
+
+    background-color: var(--box-color);
+
+    font-family: var(--font);
+    font-size: 2rem;
+    color: var(--pure-white);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* keep same width and height*/
+    aspect-ratio: 1;
+
+    transform: scale(1);
+
+}
+
+.game-table__box:hover {
+    cursor: pointer;
+}

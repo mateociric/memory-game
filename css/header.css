@@ -1,0 +1,32 @@
+.header {
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .header__button {
+    width: 25%;
+    /* to get 'space' between buttons */
+    border-right: 1px solid var(--bg-color);
+
+    background-color: var(--button-color);
+
+    text-align: center;
+    line-height: 6rem;
+
+    font-family: var(--font);
+    font-size: 1.5rem;
+    color: var(--pure-white);
+
+    cursor: pointer;
+}
+
+.header .header__button:hover {
+    animation-name: button-hover;
+    animation-duration: .75s;
+    /* prevent animation for restart */
+    animation-fill-mode: forwards;
+}

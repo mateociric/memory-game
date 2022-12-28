@@ -1,0 +1,41 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+:root {
+    --pure-white: #fff;
+    --bg-color: #f1f1f1;
+    --button-color: #ff1f44;
+    --box-color: #00a6ff;
+    --font: 'Fredoka One', sans-serif;
+
+    --animSpeed: 1s;
+}
+
+html {
+    box-sizing: content-box;
+    font-size: 62.5%;
+}
+
+/* google fonts */
+@font-face {
+    font-family: 'Fredoka One';
+    src: url(../font/FredokaOne-Regular.ttf);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.wrapper {
+
+    width: 40%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+}
