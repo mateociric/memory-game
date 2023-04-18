@@ -1,7 +1,6 @@
 let playerBoxArr = [];
 
 function playerTurn(ev) {
-
     //disable to get textContent from the <main>
     if (!ev.target.children.length) {
 
@@ -9,9 +8,6 @@ function playerTurn(ev) {
         playerBoxArr.push(box);
 
     }
-
-    //console.log(playerBoxArr);
-
 }
 
 export { playerBoxArr, playerTurn }

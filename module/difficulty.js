@@ -1,15 +1,12 @@
 let diff = 2;
 
 const DifficultyMode = {
-
     1: 'EASY',
     2: 'NORMAL',
-    3: 'HARD'
-    
+    3: 'HARD' 
 }
 
-function setDifficulty() {
-    
+function setDifficulty() {   
     diff++
 
     if(diff > Object.keys(DifficultyMode).length) {
@@ -17,7 +14,6 @@ function setDifficulty() {
     }
 
     this.textContent = DifficultyMode[diff];
-
 }
 
 export { diff, setDifficulty };

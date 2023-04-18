@@ -4,7 +4,6 @@ export default function pushEvent(playerArr, aiArr, fnGameOver, fnNextLevel, fnA
     let isChoiceRight;
 
     playerArr.push = function (num) {
-
         playerArr[playerArr.length] = num;
         let isChoiceRight = playerArr.compareWith(aiArr)
 
@@ -16,20 +15,15 @@ export default function pushEvent(playerArr, aiArr, fnGameOver, fnNextLevel, fnA
         } else {
             fnAddScore();
         }
-
     }
-
 }
 
 //to compare playerBoxArr with aiBoxArr
 Array.prototype.compareWith = function(aiArr) {
-
     if(this[this.length - 1] === aiArr[this.length - 1]) {
         return true;
     }
-
     if(this[this.length - 1] !== aiArr[this.length - 1]) {
         return false;
     }
-
 }

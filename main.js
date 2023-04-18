@@ -5,18 +5,13 @@ import { playerBoxArr, playerTurn } from './module/player.js';
 import pushEvent from './module/utility.js';
 
 function startGame() {
-
     //remove numbers from boxes on HARD difficulty
     if (MenuButtons.DIFFICULTY.textContent === 'HARD') {
-
         let gameBoxesArr = Array.from(gameBoxes.children);
-        
         gameBoxesArr.forEach(el => {
             el.style.fontSize = '0px';
         })
-
     }
-
     //set speed animation in CSS
     document.documentElement.style.setProperty('--animSpeed', `${TimerInterval[diff] / 1000}s`)
 
@@ -30,11 +25,9 @@ function startGame() {
     setTimeout(() => {
         gameBoxes.addEventListener('click', playerTurn);
     }, TimerInterval[diff] + 100);
-
 }
 
 function gameOver() {
-
     level = 1;
     score = 0;
     playerBoxArr.length = 0;
@@ -46,7 +39,6 @@ function gameOver() {
     MenuButtons.SCORE.textContent = 'SCORE';
 
     gameBoxes.removeEventListener('click', playerTurn);
-
 }
 
 function nextLevel() {
@@ -56,14 +48,12 @@ function nextLevel() {
     timer = setInterval(aiActivate, TimerInterval[diff], aiStop, gameBoxes, TimerInterval[diff]);
 
     MenuButtons.LEVEL.textContent = level;
-
     //disable player to choose boxes when level progress
     gameBoxes.removeEventListener('click', playerTurn);
 }
 
 function aiStop() {
     if (aiBoxArr.length === level) {
-
         clearInterval(timer);
         gameBoxes.addEventListener('click', playerTurn);
     }
