@@ -27,7 +27,7 @@ function startGame() {
     MenuButtons.DIFFICULTY.removeEventListener('click', setDifficulty);
 
     setTimeout(aiActivate, TimerInterval[diff], aiStop, gameBoxes, TimerInterval[diff]);
-    setTimeout(function () {
+    setTimeout(() => {
         gameBoxes.addEventListener('click', playerTurn);
     }, TimerInterval[diff] + 100);
 
@@ -50,7 +50,6 @@ function gameOver() {
 }
 
 function nextLevel() {
-
     level += 1;
     playerBoxArr.length = 0;
     aiBoxArr.length = 0;
@@ -60,42 +59,32 @@ function nextLevel() {
 
     //disable player to choose boxes when level progress
     gameBoxes.removeEventListener('click', playerTurn);
-
 }
 
 function aiStop() {
-
     if (aiBoxArr.length === level) {
 
         clearInterval(timer);
         gameBoxes.addEventListener('click', playerTurn);
-
     }
-
 }
 
 function addScore() {
-
     score += ScoreTable[diff];
     MenuButtons.SCORE.textContent = score;
-
 }
 
 const ScoreTable = {
-
     1: 5,
     2: 10,
     3: 20
-
 }
 
 //controls ai speed of randomaizing for current difficulty
 const TimerInterval = {
-
     1: 1000,
     2: 750,
     3: 500,
-
 }
 
 let level, score, timer;
